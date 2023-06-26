@@ -19,7 +19,7 @@ const NotFound = () => {
   return (
     <>
       <Links to="/" state={{ from: location.state?.from ?? '*' }}>
-        No such page exists!
+        No such page exists! Go Home!
       </Links>
     </>
   );
