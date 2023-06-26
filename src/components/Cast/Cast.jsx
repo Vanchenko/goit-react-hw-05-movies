@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { loadCastFilm } from 'api/api';
+import monkey from './monkey_1.png'
 import { Wrapper, Profile, ProfilePhoto } from './Cast.styled'
 import PropTypes from 'prop-types';
 
@@ -32,9 +33,14 @@ const Cast = () => {
         {castInfo.map(({ id, name, character, profile_path }) => (
           <Profile key={id}>
             <ProfilePhoto
-              src={`https://image.tmdb.org/t/p/w300/${profile_path}`}
+              src={
+                profile_path
+                  ? `https://image.tmdb.org/t/p/w300/${profile_path}`
+                  : monkey
+              }
               alt="Actor photo"
               width="100px"
+              height="150px"
             />
             <p>{name}</p>
             <p>Character: {character}</p>
