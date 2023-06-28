@@ -12,7 +12,7 @@ export const LinkWrapper = styled.li`
   align-items: center;
   color: blue;
   > a {
-    text-decoration: none;
+     text-decoration: none;
   }
   :hover {
     border-bottom: 2px solid blue;
